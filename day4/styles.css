@@ -1,0 +1,117 @@
+body{
+    background-image: linear-gradient(rgb(209, 94, 66), rgb(250, 208, 170), rgb(209, 94, 66));
+    height: 95vh; /*vh - ratio of the browser's view port.*/
+    width: 97vw;
+    background-attachment: fixed;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+    /* height: 95vh; vh - ratio of the browser's view port. */
+    /* width: 95vw; */
+    height: 100%;
+    width: 100%;    
+    border: 6px solid rgb(48, 57, 180);
+    margin: 2px;
+}
+
+.main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    border: 4px solid black;
+    height: 500px;
+    width: 100%;
+    
+}
+
+.item{
+    border: 6px solid #d81053;
+    height: 40px;
+    margin: 5px;
+    padding: 10px;
+    width: 40px;
+
+    color: black;
+    background-color: #e03c73;
+    text-align: center;
+    align-self:flex-start;
+  }
+
+.box{
+    border: 8px solid #1f2a57;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    order: 3;
+}
+
+.side{
+    flex: 1 auto; /* dopasują się do pozostawionego miejsca*/
+    border: 8px dashed #07312e;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    /* width: auto; */
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: flex-start; */
+    align-content: space-around;
+}
+
+.item:hover{
+    border: 6px solid black;
+    /* align-self: flex-end; nie działa bez odswiezania str */
+}
+
+.main .headre {
+    display: flex;
+    justify-self: flex-start;
+    order: 1;
+    border: 2px dotted black;
+    height: 100px;
+    width: 100%;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.main .side1 { order: 2; }
+.main .side2 { order: 4; }
+.main .footer  {
+    display: flex;
+    justify-self: flex-end;
+    order: 5;
+    border: 2px dotted black;
+    height: 100px;
+    width: 100%;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .placeholder{
+     display: flex;
+     /* flex: 1 auto; */
+     height: 100%;
+     width: 100%;
+     /* background-color: aqua; */
+     border: 4px double rgb(10, 58, 53);
+     margin: 5px;
+     align-items: center;
+     justify-content: center;
+
+ }

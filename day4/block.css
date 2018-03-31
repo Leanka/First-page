@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Aladin");
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+html{
+    height: 100%;
+}
+body{
+    background-image: linear-gradient( rgb(219, 168, 163), powderblue);
+    background-attachment: fixed;    
+    margin: 1%;
+}
+ul{
+    background-color: rgb(6, 36, 39);
+    color: rgb(219, 168, 163);
+    /* padding: 1%; */
+    font-family: "Lobster";
+    font-size: 200%;
+}
+
+li{
+    display: inline-table;
+}
+
+li a{
+    display: block;
+    text-align: center;
+    padding: 10%; /*wielkość bloku z tekstem? */
+    text-decoration: none;
+}
+
+li a:hover{
+    color: rgb(219, 168, 163);
+    background-color: rgb(13, 71, 77)
+}
+
+a:visited{
+    color: rgb(219, 168, 163);
+}
+
+a:hover{
+    color: rgb(219, 168, 163);
+}
+
+div#first{
+    background-color: rgb(46, 46, 46);
+    color: whitesmoke;
+    width: 50%;
+    font-family: "Lobster";
+    /* float: left; */
+
+}
+
+.transp{
+    background-color: transparent;
+    color: black;
+    font-family: "Pacifico";
+    width:30%;
+    float: right;
+}
+
+.text_block{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+
+
+}
+
+.frame{
+    height: 150px;
+    width: 200px;
+}

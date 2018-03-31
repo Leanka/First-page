@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster:400,700');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body
+{
+    background-image: url('hand.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgb(240, 240, 240); */
+    font-family: 'Pacifico', cursive;
+    margin: 2%;    
+}
+p
+{
+    border: 2px solid maroon;
+    background-color: rgb(247, 163, 154);
+    color: rgb(71, 0, 0);
+}
+#aaaa
+{
+    background-color:rgb(165, 161, 100);
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 2%;
+}
+pre
+{
+    border: 2px solid tomato;
+    background-color: orange;
+    color: rgb(48, 46, 46);
+}
+h3
+{
+    font-family: "Lobster", cursive;
+    margin-left: 5;
+    padding: 10px;
+    border: 2px solid rgb(23, 58, 66);
+    background-color: rgb(139, 180, 170);
+    color: rgb(0, 59, 73);
+}
+#cccc{
+    position: center;
+}

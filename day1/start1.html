@@ -1,0 +1,150 @@
+ <!DOCTYPE html>
+<!--<start tag> content <end tag> = paragraph-->
+<html>  <!--start od html doc itself-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>nazwa na zakładce w przeglądarce</title>
+    </head>
+    <p style="background-color: rgb(255, 99, 71, 0.5)">Transparent tomato</p>
+
+    <body style="background-color:rgb(212, 229, 231);"> <!--visible part starts here-->
+        <p style="border: 4px solid orange"><b>boxed list</b></p>
+        <ul>
+            <li style="border: 3px solid tomato"><pre>       first</pre></li>
+            <li style="border: 5pm solid tomato; background-color: tomato">second</li>
+            <li style="border: 3px solid tomato">third</li>
+            <li style="border: 5pm solid tomato; background-color: tomato">fourth</li>
+        </ul>
+        <p style="border: 3px solid maroon; background-color:lightsalmon; color:maroon">Multicolor text!</p>
+        <hr>
+
+        <h3 style="color:DodgerBlue"><b>Sample text</b></h3>
+        <p style=color:mediumseagreen><q><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <p style=color:maroon>Repellat, provident vero iusto non animi nesciunt placeat dicta </p>
+            modi ducimus tempora quaerat saepe porro asperiores recusandae minus, aliquam facilis velit officiis?</i></q>
+        <hr>
+        <h3 style=background-color:tomato>Tomato</h3>
+        <h3 style=background-color:orange><b>Sample text</b>></h3>
+        <p style=background-color:DodgerBlue><q><i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur illo asperiores officia ad quos, aliquam eum dolore veniam repudiandae, similique sequi exercitationem necessitatibus optio non! Minus obcaecati sequi distinctio quibusdam.</i></q></p>
+        <h3 style=background-color:mediumseagreen> Ornage</h3>
+        <h3 style=background-color:slateblue>Ornage</h3>
+        <h3 style=background-color:violet>Ornage</h3>
+
+        <hr>
+        <p>Tu jest słowo w quotsach: <q>słowo</q>.</p>
+        <hr>
+
+        <p>tag bdo robi z tekstu lustrzane odbicie:</p>
+        <bdo dir="rtl">tag bdo robi z tekstu lustrzane odbicie:</bdo>
+        <hr>
+
+        <p><cite>Words in cite tag</cite>, bla bla bla </p>
+        <hr>
+
+        <p>Dane kontaktowe z użyciem tagu adress:</p>
+            <adress>
+                Imię i nazwisko<br>
+                Adres<br>
+                Kraj<br>
+            </adress>
+        <hr>
+        <p>Tu jest skrót, którego rozwinięcie pojawi się po najechaniu myszką: 
+            <abbr title="Myth Of Clean Kode">MOCK</abbr>
+        </p>
+        <hr>
+        <p>Wcięty blok tekstu:</p>
+        <blockqoute cite="https://fonts.google.com/specimen/Lobster">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, nam dolores harum temporibus, culpa repudiandae officia laborum sed illo natus aspernatur autem molestiae voluptatum odio blanditiis, praesentium ab nemo eligendi.
+        </blockqoute>
+        <p>Koniec bloku.</p>
+        <hr>
+
+        <p>ten tekst bedzie wciety: <blockquote>wciety tekst.</blockquote>Po wcietym tekscie</p>
+        <pre>
+            Te jest <b>pogrubiony</b> tekst, to jest <i>pochyły</i>, a tu
+            jest <small>mały tekst</small>. <mark>Mark</mark> tekst, 
+            <del>deleted</del> teskt, <ins>inserted</ins> tekst, <sub>subscript</sub> text,
+            <sup>SuperScript</sup> text. <strong>Strong</strong> and <b>bold</b> text.
+            <em>Emphasized</em> text.
+        </pre>
+        <hr>
+
+        <button style="background-color:rgb(233, 178, 233); color:navy; font-family:Arial, Helvetica, sans-serif; font-size:30px">2KOLOROWY BATON!</button>
+        <pre>Ten tekst
+            Został rozbity na linie
+            Bez tagu "br",        ale za to
+                   wewnątrz tagu "pre" i z zachowaniem czcionki (?)
+        </pre> <!--preformatted text-->
+
+        <p> To jest tekst
+            podzielony na linie
+            bez użycia "br"
+            jako newlina
+        </p>
+        <p> To jest tekst <br> podzielony na linie <br> wewnątrz jednego paragrafu.</p>
+        <hr> <!-- separator = pozioma linia-->
+
+        <h1 style="font-size:60px;">Nagłówek o określonej wielkości (60px)</h1> <!--  specify the size for any heading with the style attribute, using the CSS font-size property-->
+
+        <p title="tooltip = wskazówka (chyba) :)"> po najechaniu wyświetli się wskazówka</p>
+
+        <button style="color:red">RED BUTTON</button>
+        <p style="color:red">RED PARAGRAPH</p>
+
+        <p>tu baton:</p>
+        <button>BATON</button>
+
+        <p>tu zdjęcie:</p>
+        <img 
+        src="partyhard.jpg"
+        alt="nie wiem, co robi alt"
+        width="104" 
+        height="142"
+        ><br>  <!--czemu width/hight w cudzysłowiu?-->
+
+        <img 
+        src="image_does_not_exist.jpg"
+        alt="Display if image dos not exists"></br>
+        <p>tu link:</p>
+        <a href="https://i.pinimg.com/originals/82/5c/e0/825ce09e109e8e126f2660fe5df0e70b.jpg">tu jest odnośnik</a> <!--link's destination is specified in the href attribute-->
+        
+        <p>to się wyświetli,</p>
+        to też się wyświetli
+        <br>  <!--new line-->
+        <p1>i to też</p1>
+        
+        <h1>h1</h1>  <!--hedings from most (1) to least (6) important-->
+        <h2>h2</h2>  <!-- Browsers automatically add some white space (a margin) before and after a heading.-->
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <h6>h6</h6>
+        <h7>h7</h7>
+        <h8>h8</h8>
+        <h9></h9>h1</h9>
+        <h001>h001</h001>
+        <h-1>h-1</h-1>
+
+        <p>Paragraf</p>
+
+        <p>Ordered list:</p>
+        <ol>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+
+        </ol>
+
+        <p>Unodered list:</p>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+
+        </ul>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+html{
+    height: 100%; /*wysokość ekranu na full, a nie na szerokość elemtów na stronie*/
+}
+body{
+    background-image: url('hand.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    
+}
+
+.menu{
+    margin: 0; /*odległość paska od brzegów ekranu*/
+    overflow: hidden; /*view the content even if not touched*/
+    background-color: rgb(46, 46, 46);
+
+}
+
+.menu .option{
+    background-color: rgb(46, 46, 46);
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.drop_sub_menu{
+    display: inline-block;
+}
+
+.sub_menu{
+    display: none;
+    position: absolute;
+}
+
+.sub_menu .option{
+    float: none;
+    display: block;
+}
+
+.drop_sub_menu:hover .sub_menu {
+    display: block;
+}
+
+.menu .option:hover{
+    background-color: rgb(18, 18, 18); /*kolor po najechaniu na element*/
+    color: tomato;
+}
+
+

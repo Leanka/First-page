@@ -1,0 +1,85 @@
+html{
+    height: 100%; /*wysokość ekranu na full, a nie na szerokość elemtów na stronie*/
+}
+body{
+    background-image: url('hand.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    
+}
+
+.drop{
+    list-style-type: none;
+    margin: 0; /*odległość paska od brzegów ekranu*/
+    /* padding: 0%; odległość bloków listy od brzegów belki, w któ©ej się znajdują */
+    overflow: hidden; /*view the content even if not touched*/
+    background-color: rgb(46, 46, 46);
+    color: white;
+    font-size: 25px;
+    padding: 16px 25px;
+}
+
+.drop a{
+    float: left;
+}
+
+.drop_button .b{
+    background-color:inherit;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    font-size: inherit;
+
+    padding: 16px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    /* float: left; drop list zachodzi na guzik*/
+
+}
+button{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.drop .drop_button{
+    overflow: hidden; /*placeholder, żeby nie było puste*/
+}
+.drop_list {
+    display: none;
+    position: absolute;
+
+  }
+.drop_list a {
+    float: none;
+    display: block;
+    text-align: center; /*wypośrodkowanie tekstu w komórce?*/
+    text-decoration: none;
+}
+
+.drop_button:hover .drop_list {
+    display: table;
+    background-color: goldenrod;
+}
+
+.drop a {
+    display: block; /*wyświetl jako bloki*/
+    text-align: center; /*wypośrodkowanie tekstu w komórce?*/
+    padding: 20px; /*szerokość paska*/
+    text-decoration: none;
+}
+
+.b:hover, .drop a:hover{
+    background-color: rgb(18, 18, 18); /*kolor po najechaniu na element*/
+}
+.drop a:visited, .b:hover{
+    color: whitesmoke;
+}
+.drop a:hover, .b button a:hover{
+    color: tomato;
+}

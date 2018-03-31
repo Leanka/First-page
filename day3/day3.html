@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href=table_style.css>
+        <title>Tables, lists, blocks</title>
+    </head>
+    <body>
+        <table style="width: 75%">
+            <caption>Weakly shopping lists</caption>
+            <tr>
+                <th></th>
+                <th>Poniedziałek</th>
+                <th>Wtorek</th>
+                <th>Środa</th>
+                <th>Czwartek</th>
+                <th>Piątek</th>
+                <th>Sobota</th>
+                <th>Niedziela</th>
+            </tr>
+
+            <tr>
+                <th>Shopping list</th>
+                <td>
+                    <ul style="list-style-type:circle">
+                        <li>Milk</li>
+                        <li>Eggs</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type:square">
+                        <li>Milk</li>
+                        <li>water</li>
+                        <li>apples</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type:none">
+                        <li>Milk</li>
+                        <li>water</li>
+                        <li>apples</li>
+                    </ul>
+                </td>
+                <td>None</td>
+                <td>
+                    <dl>
+                        <dt>ZARA</dt>
+                        <dd>- jeans, t-shirs</dd>
+                        <dt>Mango</dt>
+                        <dd>- dress</dd>
+                        <dt>ccc</dt>
+                        <dd>- snikers, highils</dd>
+                    </dl>
+                </td>
+                <td>
+                    <ol type="I">
+                        <li>some shop</li>
+                        <li>diff shop</li>
+                        <li>my shop</li>
+                        <li>that shop</li>
+                        <li>wat shop</li>
+                        <li>no name  shop</li>
+                    </ol>
+                </td>
+                <td>Shops are closed</td>   
+            </tr>
+            <tr>
+                <th>Budget</th>
+                <td>25</td>
+                <td>43</td>
+                <td>60</td>
+                <td>0</td>
+                <td>0</td> 
+                <td>200</td>
+                <td>-</td>
+            </tr>
+        </table>
+        <br>
+
+        <table>
+            <caption>Table whit row and column headers</caption>
+            <tr>
+                <th></th>
+                <th>r1</th>
+                <th>r2</th>
+                <th>r3</th>
+            </tr>
+            <tr>
+                <th>letter</th>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <th>fruit</th>
+                <td>blueberry</td>
+                <td>coconut</td>
+                <td>dactil</td>
+            </tr>
+            <tr>
+                <th rowspan="2">word</th> <!-- rozszczep rząd na dwa, zostaw pojedynczy header-->
+                <td>sdsd</td>
+                <td>sdsd</td>
+                <td>eeeees</td>
+            </tr>
+            <tr>
+                <!--bez nagłówka, bo jest współdzielony przez rozszczepione rzędy-->
+                <td>rwb</td>
+                <td>rwc</td>
+                <td>rwd</td>
+            </tr>
+
+        </table>
+        <br>
+
+        <table>
+            <caption>Table whit row headers</caption>
+            <tr>
+                <th>letter</th>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <th>fruit</th>
+                <td>blueberry</td>
+                <td>coconut</td>
+                <td>dactil</td>
+            </tr>
+            <tr>
+                <th rowspan="2">word</th> <!-- rozszczep rząd na dwa, zostaw pojedynczy header-->
+                <td>sdsd</td>
+                <td>sdsd</td>
+                <td>eeeees</td>
+            </tr>
+            <tr>
+                <!--bez nagłówka, bo jest współdzielony przez rozszczepione rzędy-->
+                <td>rwb</td>
+                <td>rwc</td>
+                <td>rwd</td>
+            </tr>
+
+        </table>
+
+        <table id="t2" style="width:50%">
+            <caption>Table whit column headers</caption>
+            <tr>                
+                <th>red</th>
+                <th>orange</th>
+                <th>green</th>
+                <th colspan=2>purple</th>
+            </tr>
+            <tr>
+                <td>yes</td>
+                <td>yes</td>
+                <td>yes</td>
+                <td>no</td>
+                <td>why</td>
+            </tr>
+            <tr>
+                <td>no</td>
+                <td>no </td>
+                <td>yes</td>
+                <td>potato</td>
+                <td>bla bla blabla bla</td>
+                <td>nope</td> <!-- o jedno za dużo - stworzy na to nową, pustą kolumnę -->
+            </tr>
+        </table>
+        <br>
+
+        <table id="td1" style="width:50%">
+            <caption>Title of the table</caption>
+            <tr>                
+                <th>red</th>
+                <th>orange</th>
+                <th>green</th>
+                <th colspan=2>purple</th>
+            </tr>
+            <tr>
+                <td>yes</td>
+                <td>yes</td>
+                <td>yes</td>
+                <td>no</td>
+                <td>why</td>
+            </tr>
+            <tr>
+                <td>no</td>
+                <td>no </td>
+                <td>yes</td>
+                <td>potato</td>
+                <!-- o jedno za mało, zostanie gap -->
+            </tr>
+        </table>
+        <br>
+
+        <table style="width:50%">
+            <tr>                
+                <th>red</th>
+                <th>orange</th>
+                <th>green</th>
+                <th>purple</th>
+            </tr>
+            <tr>
+                <td>y</td>
+                <td>y</td>
+                <td>n</td>
+                <td>n</td>
+            </tr>
+            <tr>
+                <td>y</td>
+                <td>y</td>
+                <td>n</td>
+                <td>n</td>
+            </tr>
+        </table>
+        <br>
+
+        <table id="blanc" style="width:50%">
+                <tr>                
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>d</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+            </table>
+    </body>
+</html>

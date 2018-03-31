@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>layout</title>
+        <link rel="stylesheet"  href="displ.css" />
+    </head>
+    <body>
+
+            <div class="container">
+            
+            <header>
+               <h1>City Gallery</h1>
+            </header>
+              
+            <nav>
+              <ul>
+                <li><a onclick="myFunction('London')">London</a></li>
+                <li><a onclick="myFunction('Paris')">Paris</a></li>
+                <li><a onclick="myFunction('Tokyo')">Tokyo</a></li>
+                <li><a onclick="myFunction('contact_form')">contact me</a></li>
+              </ul>
+            </nav>
+            
+            <article>
+            <div id="content">
+                <h1 id="box_title">Hello!</h1>
+                <p id="box_content">This page is an exercise on switching content inside of one container, and hiding/showing specified blocks!</p>
+                <p>this stays the same</p>
+            </div>
+            <div id="form">
+                  <fieldset>
+                      <legend>Form name placeholder</legend>
+                    <form >
+                        <br>                        
+                        Name:
+                        <br>
+                        <input required type="text" name="name" placeholder="Enter your name">
+                        <br>
+                        <br>
+                        Email:
+                        <br>
+                        <input required type="text" name="lastname" placeholder="Give your email">
+                        <br>
+                        <br>
+                        Comment:
+                        <br>
+                        <textarea required p placeholder="Enter a comment..."></textarea>
+                        <br>
+                        <br>
+                        <input type="submit" name="SUB">
+                    </form>
+                </fieldset>
+                </div>
+            </article>
+
+    
+            
+
+
+            
+            
+            <footer>Copyright &copy; W3Schools.com</footer>
+            
+            </div>
+
+            <script>
+                    function myFunction(id) {
+                        var content = document.getElementById("box_content");
+                        var title = document.getElementById("box_title");
+                        
+                        if (id === "contact_form") {
+                            document.getElementById("form").style.display="block";
+                            document.getElementById("content").style.display="none";
+                         
+                        }else{
+                            title.innerHTML = id;
+                            content.innerHTML = "this is " + id + " calling! Check if <b>bold</b> works by js";
+                         
+                            document.getElementById("form").style.display="none";
+                            document.getElementById("content").style.display="block";
+                        }
+                    }
+            </script>
+            </body>
+</html>
+    
