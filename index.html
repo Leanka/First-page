@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>My first site</title>
+        <link rel="stylesheet"  href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="headre"> <h1>Potato On Fire!</h1></div> 
+            <div class="navigation_menu">
+                <!-- navigation start -->
+                <div class="menu">
+                        <button type="button" class="option" onclick="myFunction('about')">About</button>
+                        <button type="button" class="option" onclick="myFunction('long')">Long Note</button>
+                        <button type="button" class="option" onclick="myFunction('short')">Short Note</button>                        
+                        <div class="drop_sub_menu">
+                            <button type="button" class="option">External links</button>
+                            <div class="sub_menu">
+                                    <button type="button" class="option" onclick="open_tab('day1/start1.html')">html &amp; css  | Day #1</button>
+                                    <button type="button" class="option" onclick="open_tab('day2/day2.html')">html &amp; css  | Day #2</button>
+                                    <button type="button" class="option" onclick="open_tab('day3/day3.html')">html &amp; css  | Day #3</button>
+                                    <button type="button" class="option" onclick="open_tab('day4/block.html'), open_tab('day4/day4.html'), open_tab('day4/nav_buttons.html'), open_tab('day4/navigation_menu.html')">html &amp; css  | Day #4</button>
+                                    <button type="button" class="option" onclick="open_tab('day5/flex_layout.html'), open_tab('day5/displ.html')">html &amp; css  | Day #5</button>
+                                    <button type="button" class="option" onclick="myFunction('day 6')">html &amp; css  | Day #6</button>
+    
+                            </div>
+                        </div>
+                        <button type="button" class="option" onclick="myFunction('contact_form')">Contact</button>
+                    </div>
+                <!-- navigation end -->
+            </div>
+            <div class="footer"><p>Copyright &copy; <a href="https://github.com/Leanka">Leanka</a></p></div>
+            <div class="main">       
+                <div class="box">
+                    <!-- start main box content -->
+                    <div id="content">
+                            <h1 id="box_title">Hello!</h1>
+                            <p id="box_content">Welcome to my first site!</p>
+                        </div>
+                        <div id="form">
+                              <fieldset>
+                                  <legend>Contact box</legend>
+                                <form >
+                                    <br>                        
+                                    Name:
+                                    <br>
+                                    <input required type="text" name="name" placeholder="Enter your name">
+                                    <br>
+                                    <br>
+                                    Email:
+                                    <br>
+                                    <input required type="text" name="lastname" placeholder="Give your email">
+                                    <br>
+                                    <br>
+                                    Comment:
+                                    <br>
+                                    <textarea required  placeholder="Enter a comment..." rows="3"></textarea>
+                                    <br>
+                                    <br>
+                                    <input type="submit" name="SUB">
+                                </form>
+                            </fieldset>
+                            </div>
+                            <div id="about_site">
+                                <img src="about.png" alt="Check project info on Canvas.">
+                            </div>
+                    <!-- end main box content -->
+                </div>
+
+                <div class="side side1">
+                    <img src="avatar.jpg" alt="Picture of me">
+                    <h4>About me</h4>
+                    <p class="scrollable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis.</p>
+                </div>
+
+                <div class="side side2">
+                        <p class="item" onclick="window.open('https://www.facebook.com/anka.lesniak.77')"><i style="font-size:24px" class="fa">&#xf230;</i></p>
+                        <p class="item" onclick="window.open('https://github.com/Leanka')"><i style="font-size:24px" class="fa">&#xf092;</i></p>
+                        <p class="item" onclick="window.open('https://www.w3schools.com/html/default.asp')"><i style="font-size:24px" class="fa">&#xf13b;</i></p>
+                        <p class="item" onclick="window.open('https://stackoverflow.com/')"><i style="font-size:24px" class="fa">&#xf16c;</i></p>
+                        <p class="item" onclick="window.open('https://www.w3schools.com/css/default.asp')"><i style="font-size:24px" class="fa">&#xf13c;</i></p>
+                        <p class="item" onclick="window.open('https://www.youtube.com/watch?v=y3UH2gAhwPI')"><i style="font-size:24px" class="fa">&#xf167;</i></p>
+                </div>
+            </div>
+            
+        </div>
+
+        <script>
+            function open_tab(file_name){
+                window.open(file_name, '_blank');
+            }
+        </script>
+        <script>
+                function myFunction(page_name) {
+                    var content = document.getElementById("box_content");
+                    var title = document.getElementById("box_title");
+                    
+                    if (page_name === "contact_form") {
+                        document.getElementById("form").style.display="block";
+                        document.getElementById("content").style.display="none";
+                        document.getElementById("about_site").style.display="none";
+                     
+                    }else if(page_name === "about"){
+                        document.getElementById("form").style.display="none";
+                        document.getElementById("content").style.display="none";
+                        document.getElementById("about_site").style.display="block";
+                    }else{
+                        title.innerHTML = "What about " + page_name + "?";
+                        content.innerHTML = getArticleContent(page_name);
+
+                        document.getElementById("form").style.display="none";
+                        document.getElementById("about_site").style.display="none";
+                        document.getElementById("content").style.display="block";
+                    }
+                }
+                function getArticleContent(page_name){
+                    var page_content = "No information found!";
+                    if(page_name === "short"){
+                        page_content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis"
+                    }else if(page_name === "long"){
+                        page_content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis"
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                        + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
+                    }else if(page_name == "day 6"){
+                        page_content = "The result of 6 days of working is the site you are visiting right now :) "
+                    }
+                    return page_content;
+                }
+        </script>
+    </body>
+</html>
