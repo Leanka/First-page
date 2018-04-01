@@ -219,6 +219,8 @@ button{
 .sub_menu{
     display: none;
     position: absolute;
+    border: 6px solid tomato;
+    border-radius: 10px;
 }
 
 .sub_menu button{
@@ -268,4 +270,10 @@ a:visited, a:link{
 
 a:hover{
     color: tomato;
+}
+
+textarea{
+    border-radius: 6px;
+    width: 100%;
+    border-style: ridge;
 }
