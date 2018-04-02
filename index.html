@@ -12,6 +12,7 @@
             <div class="navigation_menu">
                 <!-- navigation start -->
                 <div class="menu">
+                        <button type="button" class="option" onclick="myFunction('home')">Home</button>
                         <button type="button" class="option" onclick="myFunction('about')">About</button>
                         <button type="button" class="option" onclick="myFunction('long')">Long Note</button>
                         <button type="button" class="option" onclick="myFunction('short')">Short Note</button>                        
@@ -107,8 +108,9 @@
                         document.getElementById("form").style.display="none";
                         document.getElementById("content").style.display="none";
                         document.getElementById("about_site").style.display="block";
+
                     }else{
-                        title.innerHTML = "What about " + page_name + "?";
+                        title.innerHTML = getArticleTitle(page_name);
                         content.innerHTML = getArticleContent(page_name);
 
                         document.getElementById("form").style.display="none";
@@ -116,8 +118,18 @@
                         document.getElementById("content").style.display="block";
                     }
                 }
+
+                function getArticleTitle(page_name){
+                    var page_title = "No title found!";
+                    if(page_name === "home"){
+                        page_title = "Hello!"
+                    }else{
+                        page_title = "What about " + page_name + "?";
+                    }
+                    return page_title;
+                }                
                 function getArticleContent(page_name){
-                    var page_content = "No information found!";
+                    var page_content = "No content found!";
                     if(page_name === "short"){
                         page_content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis"
                     }else if(page_name === "long"){
@@ -147,8 +159,10 @@
                         + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
                         + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
                         + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum pariatur veritatis dolor temporibus sequi earum consectetur, veniam dolores nulla harum esse magnam, mollitia dignissimos possimus tempore animi? Veritatis, enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis enim molestias distinctio ut qui. Suscipit voluptatem numquam deserunt libero? Et unde consequuntur modi ipsum assumenda! Sunt ipsum aliquid incidunt omnis "
-                    }else if(page_name == "day 6"){
+                    }else if(page_name === "day 6"){
                         page_content = "The result of 6 days of working is the site you are visiting right now :) "
+                    }else if(page_name === "home"){
+                        page_content = "Welcome to my first site!";
                     }
                     return page_content;
                 }
