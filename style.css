@@ -255,13 +255,13 @@ button{
 
 img{
     width: 100%;
+    border: 6px solid rgb(46, 46, 46);
+
+    border-radius: 10px;
 }
 
 .side img{
     width: 50%;
-    border: 6px solid rgb(46, 46, 46);
-
-    border-radius: 10px;
 }
 
 a:visited, a:link{
